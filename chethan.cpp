@@ -4,7 +4,7 @@
 #include <ArduinoJson.h>
 
 // Replace with your network credentials
-const char* ssid = "Chethan G";
+const char* ssid = " ";   //Your wifi name 
 const char* password = "12345678";
 
 int ledPin = 4;      // D2 for LED
@@ -12,8 +12,8 @@ int relayPin = 5;    // D1 for Relay (controlling the fan)
 int buzzerPin = 0;   // D3 for Buzzer
 
 // Initialize Telegram BOT
-#define BOTtoken "6877465235:AAELHNa6aLKZpJx91nNR7dAlJp564dcgWo0" // your Bot Token from Botfather
-#define CHAT_ID "6560079822"
+#define BOTtoken " " // your Bot Token from Botfather within the quotes
+#define CHAT_ID " " // Chat ID
 
 X509List cert(TELEGRAM_CERTIFICATE_ROOT);
 WiFiClientSecure client;
