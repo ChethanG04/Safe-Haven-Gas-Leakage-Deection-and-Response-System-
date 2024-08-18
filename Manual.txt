@@ -1,0 +1,46 @@
+Here's a detailed step-by-step guide on how to connect the hardware components for the provided code using an ESP8266 (such as a NodeMCU):
+Components Needed:
+* ESP8266 (NodeMCU or similar)
+* MQ-2 Gas Sensor
+* LED
+* Relay Module (to control a fan or any other appliance)
+* Buzzer
+* Connecting Wires
+* Power Supply (for the ESP8266)
+Connections:
+1. Connect the LED:
+o LED Pin (D2 on ESP8266):
+* Connect the longer leg (anode) of the LED to D2 on the ESP8266.
+* Connect the shorter leg (cathode) of the LED to a 220? resistor and then to the GND (Ground) pin of the ESP8266.
+2. Connect the Relay Module:
+o Relay Pin (D1 on ESP8266):
+* Connect the IN (signal) pin of the relay module to D1 on the ESP8266.
+* Connect the VCC pin of the relay module to 3.3V or 5V (depending on your relay module) on the ESP8266.
+* Connect the GND pin of the relay module to GND (Ground) on the ESP8266.
+* Connect the COM and NO (Normally Open) pins of the relay to the appliance you want to control (e.g., fan).
+3. Connect the Buzzer:
+o Buzzer Pin (D3 on ESP8266):
+* Connect the positive (longer) leg of the buzzer to D3 on the ESP8266.
+* Connect the negative (shorter) leg of the buzzer to GND (Ground) on the ESP8266.
+4. Connect the MQ-2 Gas Sensor:
+o Analog Pin (A0 on ESP8266):
+* Connect the analog output pin of the MQ-2 sensor to A0 on the ESP8266.
+* Connect the VCC pin of the MQ-2 sensor to 3.3V or 5V on the ESP8266.
+* Connect the GND pin of the MQ-2 sensor to GND (Ground) on the ESP8266.
+5. Power the ESP8266:
+o Power Supply:
+* Provide power to the ESP8266 using a USB cable connected to your computer or a 5V power supply.
+Final Setup:
+* Ensure all connections are secure.
+* Connect the ESP8266 to a power source, and upload the code to the ESP8266 using the Arduino IDE or another compatible environment.
+Code Functionality:
+* LED (D2): Indicates the gas detection status.
+* Relay (D1): Controls a fan or another appliance to mitigate the gas leak.
+* Buzzer (D3): Alerts with sound when gas is detected.
+* MQ-2 Gas Sensor: Monitors the gas levels and triggers actions if gas levels exceed a set threshold.
+* Telegram Bot: Sends notifications to the user's phone in case of a gas leak.
+Testing:
+* After connecting everything, monitor the Serial output from the ESP8266 to check gas levels.
+* If the gas level exceeds the threshold, the buzzer will sound, the relay will activate the fan, and a message will be sent via Telegram.
+Ensure that the components are properly connected, and the code is correctly configured with your Wi-Fi credentials and Telegram bot details.
+
